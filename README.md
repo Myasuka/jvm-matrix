@@ -16,11 +16,12 @@ A more general overview about Java Matrix benchmark can be found [here](http://l
 As [SystemML](https://github.com/SparkTC/systemml) has not released any snapshot jar package on the repository, 
 I append a complied jar package under ./lib folder.
 Perhaps not anyone has the four library packages in the classpath, I recommend to assembly the jar package and then run applications.
+
 **Note** As ojAlgo v38.2 requires jdk1.8, better use jdk1.8!
 
-1.  run `sbt assembly`
-1.  `java -cp jvm-matrix-assembly-1.0.jar GenMat <rows> <cols> <sparsity> <output path>`
-1.  `java -cp jvm-matrix-assembly-1.0.jar SPMM <input A> <input B> <mode>`
+1.  run `sbt assembly` 
+1.  `java -cp jvm-matrix-assembly-1.0.jar GenMat <rows> <cols> <sparsity> <output path>` 
+1.  `java -cp jvm-matrix-assembly-1.0.jar SPMM <input A> <input B> <mode>` 
       
     mode 1 means use systemML sparse matrix multiplication,<br/>
     mode 2 means use Breeze sparse matrix multiplication,<br/> 
@@ -28,3 +29,4 @@ Perhaps not anyone has the four library packages in the classpath, I recommend t
     mode 4 means use ojAlgo sparse matrix multiplication,<br/>
     mode 5 means use MTJ sparse matrix multiplication in `LinkedSparseMatrix` format,<br/>
     mode 6 means use MTJ sparse matrix multiplication in `CompColMatrix` format<br/>
+    
